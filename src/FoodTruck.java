@@ -1,7 +1,9 @@
-package models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ * This represents the Food Truck POJO returned back by the SODA API Client  
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FoodTruck {
 	private String location;
@@ -13,19 +15,6 @@ public class FoodTruck {
 	private String starttime;
 	private String endtime;
 	private String dayofweekstr;
-
-	public String getDayofweekstr() {
-		return dayofweekstr;
-	}
-	public void setDayofweekstr(String dayofweekstr) {
-		this.dayofweekstr = dayofweekstr;
-	}
-	public String getApplicant() {
-		return applicant;
-	}
-	public void setApplicant(String applicant) {
-		this.applicant = applicant;
-	}
 	public String getLocation() {
 		return location;
 	}
@@ -50,8 +39,18 @@ public class FoodTruck {
 	public void setLocationdesc(String locationdesc) {
 		this.locationdesc = locationdesc;
 	}
-
-	
+	public String getOptionaltext() {
+		return optionaltext;
+	}
+	public void setOptionaltext(String optionaltext) {
+		this.optionaltext = optionaltext;
+	}
+	public String getApplicant() {
+		return applicant;
+	}
+	public void setApplicant(String applicant) {
+		this.applicant = applicant;
+	}
 	public String getStarttime() {
 		return starttime;
 	}
@@ -64,24 +63,16 @@ public class FoodTruck {
 	public void setEndtime(String endtime) {
 		this.endtime = endtime;
 	}
-	public String getOptionaltext() {
-		return optionaltext;
+	public String getDayofweekstr() {
+		return dayofweekstr;
 	}
-	public void setOptionaltext(String optionaltext) {
-		this.optionaltext = optionaltext;
+	public void setDayofweekstr(String dayofweekstr) {
+		this.dayofweekstr = dayofweekstr;
 	}
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(this.applicant + "\t" + this.location);
-		/*
-		sb.append(" - " + this.location);
-		sb.append(" - " + this.starttime + " to " + this.endtime + " on " + this.dayofweekstr);
-		if(this.optionaltext != null) {
-			sb.append("\n\t" + this.optionaltext);
-		}
-		*/
-		return sb.toString();
+		return "FoodTruck [location=" + location + ", start24=" + start24 + ", end24=" + end24 + ", locationdesc="
+				+ locationdesc + ", optionaltext=" + optionaltext + ", applicant=" + applicant + ", starttime="
+				+ starttime + ", endtime=" + endtime + ", dayofweekstr=" + dayofweekstr + "]";
 	}
-
 }
