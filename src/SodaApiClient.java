@@ -47,12 +47,12 @@ public class SodaApiClient {
 			StringBuilder querySb = new StringBuilder();
 			querySb.append("$offset=" + offset);
 			querySb.append("&$limit=" + limit);
-			String whereClause = "starttime < '" + time + "'" + "AND endtime >'" + time + "'";
+			String whereClause = "start24 < '" + time + "'" + "AND end24 >'" + time + "'";
 			querySb.append("&$where=" + URLEncoder.encode(whereClause, "UTF-8"));
 			querySb.append("&$$exclude_system_fields=true");
 			querySb.append("&$order=applicant");
 			querySb.append("&dayorder=" + dayOrder);
-			querySb.append("&$select=location,end24,endtime,start24,dayofweekstr,dayorder,applicant,optionaltext");
+			querySb.append("&$select=location,end24,endtime,starttime,start24,dayofweekstr,dayorder,applicant,optionaltext");
 
 			URL url = new URL(BASE_URL + "?" + querySb.toString());
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();

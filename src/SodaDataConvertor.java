@@ -6,12 +6,12 @@ import java.util.Calendar;
  */
 public class SodaDataConvertor {
 	/**
-	 * String representation of the Calendar value of AM/PM
-	 * @param amPm - Calendar's value representing AM/PM
-	 * @return String representation of AM or PM
+	 * Return the expected Soda Data Format for hour of day
+	 * @param hourOfDay - The hour of day
+	 * @return String representation of the hour of day (ex. 09:00)
 	 */
-	public static String convertAmPm(final int amPm) {
-		return (amPm == Calendar.AM) ? "AM" : "PM";
+	public static String convertHourFormat(final int hourOfDay) {
+		return 	((hourOfDay < 10) ? "0" + hourOfDay : hourOfDay) + ":00";
 	}
 
 	/**

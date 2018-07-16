@@ -14,7 +14,8 @@ public class FoodTruckFinder {
 		Calendar c = Calendar.getInstance();
 		int dayOrder = SodaDataConvertor.convertToDayOfWeekStr(c.get(Calendar.DAY_OF_WEEK));
 
-		String currentTime = c.get(Calendar.HOUR) + SodaDataConvertor.convertAmPm(c.get(Calendar.AM_PM));
+		int hourOfDay =  c.get(Calendar.HOUR_OF_DAY);
+		String currentTime = SodaDataConvertor.convertHourFormat(hourOfDay);
 		
 		// Used to manage paging
 		int previousOffset = 0;
