@@ -24,9 +24,9 @@ public class FoodTruckFinder {
 		Scanner sc = new Scanner(System.in);
 		String input;
 		
-		System.out.println("-------------------------------------------------------------");
+		System.out.println("------------------------------------------------------------------------------------------------------");
 		System.out.println("Food Truck Finder");
-		System.out.println("-------------------------------------------------------------");
+		System.out.println("------------------------------------------------------------------------------------------------------");
 
 		do {
 			previousOffset = currentOffset;
@@ -60,20 +60,20 @@ public class FoodTruckFinder {
 	}
 
 	private void printFoodTruckList(List<FoodTruck> list, int offset) {
-		String format2 = String.format("%-3s %-40s %-8s", "", "Name", "Address");
+		String format2 = String.format("%-3s %-75s %-8s", "", "Name", "Address");
 		System.out.println(format2);
-		System.out.println("-------------------------------------------------------------");
+		System.out.println("------------------------------------------------------------------------------------------------------");
 
 		if (list.size() == 0) {
 			System.out.println("Sorry there is no more food trucks open at this time.");
 		}
 
 		for (FoodTruck f : list) {
-			String format = String.format("%-3s %-40s %-8s", (offset++ + 1), f.getApplicant(),
+			String format = String.format("%-3s %-75s %-8s", (offset++ + 1), f.getApplicant(),
 					f.getLocation());
 			System.out.println(format);
 		}
-		System.out.println("-------------------------------------------------------------");
+		System.out.println("------------------------------------------------------------------------------------------------------");
 	}
 
 	
