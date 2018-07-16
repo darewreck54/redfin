@@ -67,3 +67,8 @@ to handle the expected workload for the next couple of year and readjust based o
 - Use webpack to bundle up all the javascript modules.  Can have different configuration for prod vs. dev
 - Add unit test to validate client logic
 - Use Typescript and Linting to make codebase more readable and manageable
+
+**Improvements to code base**
+- The API Client code could be cleaned up to be more flexible.  Also the way the request url with the query parameter are constructed could be improved
+- Add more Error Handling.  At this time, if there is a invalid response code, the application will just print out the error message which is not helpful
+  to the user.  This can be taylored to be more user friendly.  All Errors can be filtered through the error stream as well vs. the stdout stream
