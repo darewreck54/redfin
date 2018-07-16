@@ -9,6 +9,11 @@
 
 A runnable jar is provided to execute the application.  There is no need to build it. 
 
+If you do want to build it, I used Eclipse IDE.  
+1) Create a new project and make root set to the root of the repo.  
+2) Right click the project -> Properties -> Java Build Path -> Libraries -> Add Jars and select the three jars located in /libs
+3) Within eclipse, you can run the java application directly from there.
+
 **To run the application**
 
 A runnable jar was created from the project.  To run the application, go to the root of the directory and locate "ShowOpenFoodTrucks.jar".
@@ -22,6 +27,9 @@ will have three options:
 2. Type 'n' to grab the next 10 food trucks
 3. Type 'p' to grab the 10 previous food trucks
 
+Example:
+
+![alt-text](https://github.com/darewreck54/redfin/blob/master/clip.gif)
 
 **Here are a list of things I would do differently for a full-scale web application**
 
